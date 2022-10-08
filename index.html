@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="count">
+            <div class="parateste">
+                <span>Informe a data e hora final do Count</span>
+                <label for="date">data</label>
+                <input type="date" name="date" id="">
+                <label for="time">tempo</label>
+                <input type="time" name="time" id="">
+                <button id="informar">Informar</button>
+            </div>
+            <div class="titulo">Ready to launch in...</div>
+            <div class="count-js">
+                <div class="dias">
+                    <span>dias</span>
+                    <span>00</span>
+                </div>
+                <div class="horas">
+                    <span>horas</span>
+                    <span>00</span>
+                </div>
+                <div class="minutos">
+                    <span>minutos</span>
+                    <span>00</span>
+                </div>
+                <div class="segundos">
+                    <span>segundos</span>
+                    <span>00</span>
+                </div>
+            </div>
+            <div class="inscreva-se">
+                <p>Inscreva-se para saber mais sobre o lançamento</p>
+                <button>Inscreva-se</button>
+            </div>
+        </section>
+        <section class="img">
+            <img src="./images/rocket.svg" alt="imagem rocketaeat">
+        </section>
+    </main>
+    <footer></footer>
+
+    <div class="modal-container">
+        <div class="modal">
+            <button class="exit">X</button>
+            <form>
+                <p>Inscreva-se para saber mais sobre o lançamento</p>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <button id="enviar">Enviar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

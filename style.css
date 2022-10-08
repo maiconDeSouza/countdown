@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#informar{
+    cursor: pointer;
+}
+
+label{
+    display: none;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    
+
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+
+    grid-template-rows: 47px 1fr 143px;
+    
+}
+
+header{
+    grid-area: header;
+    background-image: url('./images/top-image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "count img";
+    grid-template-columns: 1fr 1fr;
+}
+
+main .count{
+    grid-area: count;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .count .titulo{
+    text-transform: uppercase;
+    color: var(--purple);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+main .count .count-js{
+    margin-top: 2.1rem;
+    display: flex;
+    gap: 3rem;
+}
+
+main .count .count-js div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .count .count-js div span:nth-of-type(1){
+    color: var(--text-color);
+}
+
+main .count .count-js div span:nth-of-type(2){
+    color: var(--black);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+main .count .inscreva-se{
+    margin-top: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main .count .inscreva-se p{
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+main .count .inscreva-se button{
+    padding: 15px 40px;
+    background-color: var(--purple);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+main .img{
+
+    grid-area: img;
+}
+
+
+footer{
+    background-image: url('./images/bottom-image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: footer;
+}
+
+.modal-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container.active{
+    display: flex;
+}
+
+.modal-container .modal{
+    width: 40%;
+    height: 70%;
+    min-height: 400px;
+    background-color: #fff; 
+    border: 10px solid var(--purple);
+    box-shadow: 0 0 0 10px #fff;
+    position: relative;
+    animation: modal 1s;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -90px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-container .modal .exit{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: var(--purple);
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.modal-container .modal p{
+    text-transform: uppercase;
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.modal-container .modal form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    gap: 1.5rem;
+}
+
+.modal-container .modal form input{
+    width: 70%;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid var(--purple);
+    font-size: 18px;
+    padding: 5px;
+}
+
+.modal-container .modal form button{
+    padding: 15px 40px;
+    background-color: var(--purple);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 790px){
+    label{
+        display: inline-block;
+    }
+    
+    main{
+        grid-area: main;
+        display: grid;
+        grid-template-areas: 
+        "count"
+        "img";
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .parateste{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parateste input{
+        margin: 15px 0;
+    }
+    input{
+        width: 100%;
+    }
+
+    #informar{
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    .modal-container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+       
+    }
+
+    .modal-container .modal{
+        width: 80%;
+        height: 450px;
+        
+    }
+
+    .modal-container .modal p{
+        text-align: center;
+    }
+}
