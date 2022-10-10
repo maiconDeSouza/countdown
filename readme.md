@@ -17,7 +17,7 @@
     src="https://raw.githubusercontent.com/maiconDeSouza/assets/master/countdown/lancamento.gif"
 />
 <p>
-    Neste projeto foi a primeira vez que utilizei o Objeto Date do JavaScript.
+    Neste projeto foi a primeira vez que utilizei o Objeto Date do JavaScript. Eu coloquei uma opção acima onde você seta uma data e um horário apenas para ficar mais simples de testar o projeto.
 </p>
 
 <img 
