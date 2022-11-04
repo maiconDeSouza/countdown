@@ -13,6 +13,14 @@
     O Projeto é um <strong>Countdown</strong> que é muito usado em páginas de lançamento de produtos digitais.
 </p>
 
+<p>
+    Acesse o  <a href="https://countdown.maiconsouza.com.br/">Projeto</a> 
+</p>
+
+<p>
+    Acesse o meu  <a href="https://portfolio.maiconsouza.com.br/">Portfólio</a> 
+</p>
+
 <img 
     src="https://raw.githubusercontent.com/maiconDeSouza/assets/master/countdown/lancamento.gif"
 />
